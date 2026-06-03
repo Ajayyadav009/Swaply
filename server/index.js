@@ -28,7 +28,7 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoutes);
-app.use('/api/user', userRoutes)
+app.use('/api/users', userRoutes)
 app.use('/api/matches', matchRoutes);
 app.use('/api/chat', chatRoutes);
 require('./socket/socketHandler')(io); 
