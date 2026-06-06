@@ -37,5 +37,5 @@ const avalabiltySchema = new mongoose.Schema({
 },
 { timestamps: true }
 );
-avalabiltySchema = index({ user: 1,  dayOfWeek: 1});
+avalabiltySchema.index({ user: 1,  dayOfWeek: 1});
 module.exports = mongoose.model('Avalibilty', avalabiltySchema);

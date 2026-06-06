@@ -1,14 +1,14 @@
-const mongoose = required("mongoose");
+const mongoose = require("mongoose");
 const sessionSchema = new mongoose.Schema(
   {
     teacher: {
-      type: mongoose.Schema.Types.Objectid,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
     student: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user",
+      ref: "User",
       required: true,
     },
     skill: {
