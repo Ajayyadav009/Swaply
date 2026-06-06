@@ -10,6 +10,7 @@ const userRoutes = require('./routes/userRoutes');
 const matchRoutes = require('./routes/matchRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
+const sessionRoutes = require('./routes/sessionRoutes');
 
 
 dotenv.config();
@@ -33,6 +34,8 @@ app.use('/api/matches', matchRoutes);
 app.use('/api/chat', chatRoutes);
 require('./socket/socketHandler')(io); 
 app.use('/api/reviews', reviewRoutes);
+app.use('/api/sessions', sessionRoutes);
+
 app.get('/', (req, res) => {
     res.json({message: "Skill swap API is running"});
 
